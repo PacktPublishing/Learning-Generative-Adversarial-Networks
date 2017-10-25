@@ -1,0 +1,31 @@
+# Clone Git repo
+git clone https://github.com/Kuntal-G/StackGAN.git
+cd StackGAN
+
+# Install using pip
+sudo pip install prettytensor progressbar python-dateutil easydict pandas torchfile requests
+
+
+python google-drive-download.py 0B3y_msrWZaXLT1BZdVdycDY5TEE Data/ birds.zip
+unzip Data/birds.zip
+
+
+wget http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz -O Data/birds/CUB_200_2011.tgz
+tar -xzf CUB_200_2011.tgz
+
+
+python misc/preprocess_birds.py
+
+
+python google-drive-download.py 0B3y_msrWZaXLNUNKa3BaRjAyTzQ models/ birds_model_164000.ckpt
+
+python google-drive-download.py 0B0ywwgffWnLLU0F3UHA3NzFTNEE models/text_encoder/  lm_sje_nc4_cub_hybrid_gru18_a1_c512_0.00070_1_10_trainvalids.txt_iter30000.t7
+
+
+# add following lines in the example_captions.txt file
+A white bird with a black crown and red beak
+this bird has red breast and yellow belly
+
+
+# Demo run
+sh demo/birds_demo.sh

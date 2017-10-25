@@ -1,0 +1,44 @@
+**** Apple to Orange *****
+# Clone Git repo
+git clone https://github.com/xhujoy/CycleGAN-tensorflow
+cd CycleGAN-tensorflow
+
+
+
+# Download celebA dataset
+bash ./download_dataset.sh apple2orange
+
+
+
+# Training
+python main.py --dataset_dir=apple2orange
+
+
+# Tensorboard Visualization 
+tensorboard --logdir=./logs
+
+http://localhost:6006/
+
+
+**** Horse to Zebra *****
+# Clone Git repo
+git clone https://github.com/xhujoy/CycleGAN-tensorflow
+cd CycleGAN-tensorflow
+
+
+
+# Download celebA dataset
+bash ./download_dataset.sh horse2zebra
+
+
+
+# Training
+python main.py --dataset_dir=horse2zebra
+
+
+# Tensorboard Visualization 
+tensorboard --logdir=./logs
+
+http://localhost:6006/
+
+

@@ -1,0 +1,2 @@
+You can download the pretrained Keras InceptionV3 model from the below link and use it during local docker container deployment with docker run using -v volume mapping to load the model from host path to container path.
+https://drive.google.com/open?id=0B1Xq4UfDrwumUGVHTWVWY2RYUGs

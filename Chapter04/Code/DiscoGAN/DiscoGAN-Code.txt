@@ -1,0 +1,28 @@
+# Makesure you have pytorch ad opencv install in the system
+
+***** Edges to Handbags *******
+# Clone Git repo
+git clone https://github.com/SKTBrain/DiscoGAN.git
+cd DiscoGAN
+
+
+# Download edges2handbags dataset
+python ./datasets/download.py edges2handbags
+
+
+# Image translation
+python ./discogan/image_translation.py --task_name='edges2handbags'
+
+
+***** Gender Transformation  *******
+# Clone Git repo
+git clone https://github.com/SKTBrain/DiscoGAN.git
+cd DiscoGAN
+
+
+# Download facescrub dataset
+python ./datasets/download.py facescrub
+
+
+# Image translation
+python ./discogan/image_translation.py --task_name='facescrub'

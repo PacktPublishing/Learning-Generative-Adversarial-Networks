@@ -1,0 +1,10 @@
+# Clone Git repo
+git clone https://github.com/carpedm20/BEGAN-tensorflow.git
+cd BEGAN-tensorflow
+
+
+# Download celebA dataset
+python download.py
+
+# Training
+python main.py --dataset=CelebA --use_gpu=True
